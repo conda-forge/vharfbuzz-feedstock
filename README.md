@@ -1,11 +1,11 @@
-About vharfbuzz
-===============
+About vharfbuzz-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vharfbuzz-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/simoncozens/vharfbuzz
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vharfbuzz-feedstock/blob/main/LICENSE.txt)
 
 Summary: A user-friendlier way to use Harfbuzz in Python
 
