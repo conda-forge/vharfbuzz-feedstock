@@ -1,5 +1,5 @@
 {% set name = "vharfbuzz" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/vharfbuzz-{{ version }}.tar.gz
-  sha256: 6c12a656f2ee73f0ad405f934ab8bc9e08259e3e100a1efb155f891cfcec1402
+  sha256: cc5570f0dc61edc449364fd2ec3dee88819284132267f25eb92757e2137de247
 
 build:
   noarch: python
