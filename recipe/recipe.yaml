@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  name: vharfbuzz
+  version: "0.3.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/vharfbuzz-${{ version }}.tar.gz
+  sha256: cc5570f0dc61edc449364fd2ec3dee88819284132267f25eb92757e2137de247
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - fonttools
+    - python >=${{ python_min }}
+    - uharfbuzz
+
+tests:
+  - python:
+      imports:
+        - vharfbuzz
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: A user-friendlier way to use Harfbuzz in Python
+  license: MIT
+  license_file:
+    - LICENSE
+  homepage: https://github.com/simoncozens/vharfbuzz
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
